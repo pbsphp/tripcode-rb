@@ -18,12 +18,15 @@ module Tripcode
   ## Kusaba calculateNameAndTripcode() was used (ported?).
   ## Kusaba X imageboard engine, http://kusabax.cultnet.net/
 
-  def tripcode_from(str, options={})
+  def tripcode_from(author, options={})
 
     tripcode = nil
 
 
-    if str =~ /(#|!)(.*)/
+    author =~ /[^!#]*+/
+    name = $&
+
+    if author =~ /(#|!)(.*)/
       delimiter = $1
       cap = $2
 
@@ -65,7 +68,7 @@ module Tripcode
     end
 
 
-    tripcode
+    [ name, tripcode ]
   end
 
 end
