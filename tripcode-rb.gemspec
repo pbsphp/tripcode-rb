@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "A simple imageboard tripcode generator"
   s.authors     = ["Pbsphp"]
   s.email       = 'pbsphp@yandex.ru'
-  s.files       = ["lib/tripcode-rb.rb"]
+  s.files       = ["lib/tripcode.rb"]
   s.homepage    = 'http://github.com/pbsphp/tripcode-rb'
   s.license     = 'MIT'
 end
