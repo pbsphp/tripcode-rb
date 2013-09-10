@@ -1,4 +1,4 @@
-module TripcodeRb
+module Tripcode
 
   ## Required for secure tripcode
   require 'digest/md5'
@@ -13,7 +13,7 @@ module TripcodeRb
   ## @param options:
   ##   string randomseed - randomseed for secure tripcode
   ##     ( secure tripcode will be disabled if randomseed is nil or false )
-  ## @return tripcode
+  ## @return (string) tripcode or nil
 
   ## Kusaba calculateNameAndTripcode() was used (ported?).
   ## Kusaba X imageboard engine, http://kusabax.cultnet.net/
@@ -41,9 +41,6 @@ module TripcodeRb
 
 
       if cap && !cap.empty?
-        cap.tr!('&amp;', '&')
-        cap.tr!('&#44;', ', ')
-
         salt = "#{cap}H."[1..2]
         salt.gsub!(/[^\.-z]/, '.')
         salt.tr!(':;<=>?@[\\]^_`', 'ABCDEFGabcdef')
