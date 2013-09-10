@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'tripcode-rb'
-  s.version     = '0.0.1'
+  s.version     = '0.9.0'
   s.date        = '2013-09-09'
   s.summary     = "Imageboard tripcode"
   s.description = "A simple imageboard tripcode generator"
